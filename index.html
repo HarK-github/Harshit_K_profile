@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Harshit_Kandpal</title>
+    <style>
+        body{
+            animation: strt;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation: ease;
+
+        }
+        @keyframes strt {
+            from{
+                display: hidden;
+            }to{
+                display: contents;
+            }
+        }       
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0px;
+            margin:0px;
+        }
+        .hs{
+            font-family:  "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+            padding: 20px;
+            text-decoration:solid white;
+                
+        }
+        .h{
+            font-family:  "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size:100px;
+            font-weight: 600;
+            margin: 20px;
+            animation-name:disco;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            color:rgb(245, 245, 247);
+        }
+
+        @keyframes disco{
+            from{
+                color:rgb(168, 160, 160);
+            }
+            to{
+                
+                color:rgb(235, 235, 235);
+            }
+
+        }
+        .top{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-image: url("./topbg.jpg");
+            background-size: 100vw 100vh;
+            align-items: center;
+        }
+        .bar_top{
+            display: flex;
+            padding: 2% 2%;
+            width: 100%;
+            justify-content: space-between;
+        }
+        a{
+            text-decoration: none;
+            padding: 20px;
+            font-size: 20px;
+            color:white;
+        }
+        a:hover{
+            text-decoration: none;
+            color:gray;
+            padding:10px;
+            font-size: 30px;
+            transition: color 0.25s, font-size 0.25s,padding 0.115s;
+        }
+        #bar_op:not(.fixed){
+            /*position:fixed;
+            top:28%;*/
+            display: flex;
+            justify-content:space-around;
+            width:40%;
+            margin: 20px;
+            color:gray;
+            
+        }
+        
+        .fixed {
+            position: fixed; /* Keeps the bar fixed at the top */
+        bottom: 0; /* Sticks to the top of the viewport */
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: rgba(36,36,36);
+        padding:20px;
+        margin:10px;
+            }
+        .middle{
+            background-image: url("./bg.jpg");
+        }
+        .content{
+            font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color:white;
+            padding: 30px;
+            
+        }
+        .bottom{
+            padding: 20px;
+            width: 100%;
+            position: fixed;
+            bottom:10px;
+            color:gray;
+            border: solid 1px rgb(78, 75, 75);  
+        }
+        div[id^="g"]{
+            width: 20px;
+            height: 20px;
+            background-color: rgb(61, 49, 49);
+            border-radius: 50%;
+            position: relative;
+            top: -20px;
+            animation-name: down;
+            animation-duration: 2s; /* Set the duration */
+            animation-timing-function: linear; /* Ensure smooth movement */
+            animation-iteration-count: infinite; /* Repeat the animation infinitely */
+        }
+        @keyframes down {
+            from{
+                top:-20px;
+            }to{
+                top: 100vh;
+            }
+        }
+        .underline{
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+        .imgball{
+            margin:0px 40px 0px 0px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url("./self(2).jpg");
+            background-repeat: no-repeat;
+            position: 100vw 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="bar_top" >
+            <div class="h" >Harshit Kandpal</div>
+            <div class="imgball"></div>
+        </div>
+        <div id="bar_op">
+            <a href="">HOME</a>
+            <a href="">ABOUT</a>
+            <a href="">JOURNEY</a>
+            
+        </div>
+        </div>
+    
+    <div class="middle">
+            <div class="hs">About</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel provident delectus sint ex ab eos nulla, aperiam deleniti, cumque quam eius obcaecati repellendus, repudiandae mollitia recusandae enim necessitatibus omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores consectetur eaque asperiores quasi repellat voluptatem, laudantium doloremque est, omnis sint labore repudiandae recusandae nemo expedita. Iure, aliquam. Non, consectetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur. Repellat eveniet itaque laborum error esse nesciunt sed, aut corrupti, fugiat facilis hic ratione quasi necessitatibus dolor voluptatem. Nihil, laborum.<eaque class="lore"></eaque></div>
+        <div class="ls" style="background-image:url('./IITBG.png');background-attachment: fixed;background-size: 100vw 100vh;height: 400px;width: 100%;border-bottom-left-radius: 40%;">
+             </div>
+            <div></div>
+            <div class="hs">Hobbies</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel provident delectus sint ex ab eos nulla, aperiam deleniti, cumque quam eius obcaecati repellendus, repudiandae mollitia recusandae enim necessitatibus omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores consectetur eaque asperiores quasi repellat voluptatem, laudantium doloremque est, omnis sint labore repudiandae recusandae nemo expedita. Iure, aliquam. Non, consectetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur. Repellat eveniet itaque laborum error esse nesciunt sed, aut corrupti, fugiat facilis hic ratione quasi necessitatibus dolor voluptatem. Nihil, laborum.<eaque class="lore"></eaque></div>
+        <div></div>
+            <div class="hs">Random</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel provident delectus sint ex ab eos nulla, aperiam deleniti, cumque quam eius obcaecati repellendus, repudiandae mollitia recusandae enim necessitatibus omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores consectetur eaque asperiores quasi repellat voluptatem, laudantium doloremque est, omnis sint labore repudiandae recusandae nemo expedita. Iure, aliquam. Non, consectetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur. Repellat eveniet itaque laborum error esse nesciunt sed, aut corrupti, fugiat facilis hic ratione quasi necessitatibus dolor voluptatem. Nihil, laborum.<eaque class="lore"></eaque></div>
+            <br>
+            
+        </div>
+    <img src="./m.png" width="200*1.7" height="200" style="position:fixed;top:70%;left:75%">
+    <div class="bottom"> Copyright Author: Harshit Kandpal</div>
+    <!-- <script>bod = document.querySelector(".middle");
+
+        function createparticles(){
+            for(var a =1;a<10;a++){
+                par = document.createElement("div");
+                par.id = `g${a*1}`;
+                par.style.left = `${a*10}%`;
+                par.style.animationDelay=`${a}s`;
+                par.style.animationDuration=`${a}s`;
+                bod.appendChild(par);
+            }
+        }
+        function animate(){
+            p = document.querySelector("#g");
+            
+ 
+        }
+        createparticles();
+        animate()</script> -->
+        <script>
+        const fic = false;
+        const barTop = document.querySelector('#bar_op');
+
+        const topOffset = barTop.offsetTop; // Get the initial offset position of the .bar_top
+
+        window.addEventListener('scroll', function() {
+        if (window.scrollY > topOffset) {
+            barTop.classList.add('fixed'); // Add the fixed class when scrolled past the topOffset
+        } else {
+            
+            barTop.classList.remove('fixed'); // Remove the fixed class when above topOffset
+        }
+    });
+        </script>
+</body>
+</html>
