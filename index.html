@@ -11,11 +11,11 @@
             animation-duration: 2s;
             animation-iteration-count: 1;
             animation: ease;
-
+            background-color: black;
         }
         @keyframes strt {
             from{
-                display: hidden;
+                display: none;
             }to{
                 display: contents;
             }
@@ -27,15 +27,17 @@
             padding: 0px;
             margin:0px;
         }
+            
         .hs{
             font-family:  "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 40px;
             font-weight: 600;
             color: white;
-            padding: 20px;
-            text-decoration:solid white;
-                
+            padding: 30px;
+            text-decoration:underline green;
+            animation: slid 1.5s;
         }
+
         .h{
             font-family:  "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size:100px;
@@ -61,28 +63,40 @@
         .top{
             width: 100%;
             display: flex;
-            flex-direction: column;
-            background-image: url("./topbg.jpg");
-            background-size: 100vw 100vh;
-            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            background-image: url("./topbg2.jpg");
+            background-size: 50vw 50vh;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            border-bottom: solid white;
+            height: 50%;
         }
         .bar_top{
+            width: 50%;
+            padding:10px;
+            margin:0px;
             display: flex;
-            padding: 2% 2%;
-            width: 100%;
             justify-content: space-between;
+
         }
-        a{
+        
+
+        a{ 
             text-decoration: none;
             padding: 20px;
+            
+            height: 10%;
             font-size: 20px;
             color:white;
         }
         a:hover{
-            text-decoration: none;
+            text-decoration: underline blue;
             color:gray;
             padding:10px;
             font-size: 30px;
+            height: 10%;
             transition: color 0.25s, font-size 0.25s,padding 0.115s;
         }
         #bar_op:not(.fixed){
@@ -91,19 +105,20 @@
             display: flex;
             justify-content:space-around;
             width:40%;
-            margin: 20px;
-            color:gray;
-            
+            padding:20px;
+            margin:10px;
+            color:rgb(190, 176, 176);   
         }
         
+        
         .fixed {
-            position: fixed; /* Keeps the bar fixed at the top */
-        bottom: 0; /* Sticks to the top of the viewport */
-        border-radius: 10px;
-        font-size: 20px;
-        background-color: rgba(36,36,36);
-        padding:20px;
-        margin:10px;
+                position: fixed; /* Keeps the bar fixed at the top */
+                top:0px;
+                right:0%;
+                font-size: 20px;
+                background-color: black;
+                padding:20px;
+                margin:10px;
             }
         .middle{
             background-image: url("./bg.jpg");
@@ -111,16 +126,22 @@
         .content{
             font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
             color:white;
-            padding: 30px;
+            padding: 30px 0px 10px 100px;
+            font-size: large;
+            animation: slid 1s;
             
         }
         .bottom{
             padding: 20px;
             width: 100%;
-            position: fixed;
-            bottom:10px;
-            color:gray;
-            border: solid 1px rgb(78, 75, 75);  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            background-image: url('./botbg.jpg');
+            background-size: 50vw 50vh;
+
+            color:rgb(194, 184, 166);
         }
         div[id^="g"]{
             width: 20px;
@@ -142,51 +163,148 @@
             }
         }
         .underline{
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-}
+            display: inline-block;
+            position: relative;
+            color: #0087ca;
+        }
         .imgball{
-            margin:0px 40px 0px 0px;
+            margin:0px 40px 50px 0px;
             width: 200px;
             height: 200px;
             border-radius: 50%;
             background-image: url("./self(2).jpg");
             background-repeat: no-repeat;
+            background-size: cover;
             position: 100vw 100vh;
+            
+            animation: slid 2s;
+        }
+        .imgball:hover{
+            margin:0px 40px 50px 0px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-image: url("./self(2).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: 100vw 100vh;
+        }
+        .multicolor-text {
+            font-weight: 900;
+            font-size: 50px;
+            background: linear-gradient(to left,
+                    violet,
+                    rgb(102, 149, 248),
+                    rgb(5, 109, 45),
+                    rgb(38, 233, 38),
+                    rgb(66, 25, 250),
+                    violet
+                    );
+                    background-size: 900%;
+            background-clip: text;
+            color: transparent;
+            animation:colors 33s linear infinite;
+        }
+        @keyframes colors {
+            0%{
+                background-position: 0% 300%;              
+            }
+            50%{
+                background-position: 300% 600%;
+            }
+            100%{
+                
+                background-position: 600% 1000%;
+            }
+        }
+        .imgball2{
+            margin: 30px;
+        }
+        .bx{
+            margin:10px 0px 10px 0px ;
+        }
+        @keyframes slid {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+        }@keyframes backslid {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
         }
     </style>
 </head>
 <body>
     <div class="top">
-        <div class="bar_top" >
-            <div class="h" >Harshit Kandpal</div>
-            <div class="imgball"></div>
+        <div class="bar_top">
+            <div class="h" style="animation: slid 1s;"><div class="multicolor-text" >Hey there!</div></div>
+            <div class = "h" style="animation: slid 2s;"> I am Harshit Kandpal</div>
+        
         </div>
         <div id="bar_op">
-            <a href="">HOME</a>
-            <a href="">ABOUT</a>
-            <a href="">JOURNEY</a>
-            
+            <a href="#" class="HOMEb">HOME</a>
+            <a href="#" class="CONTACTb">CONTACT</a>
+            <a href="#" class="JOURNEYb">JOURNEY</a>
         </div>
         </div>
+    </div>
+    <div class="CONTACT" style="display:none">
+        <div class="middle"></div>
+            <div class = "bx" style="background-color: black;">
+                    <div class="hs" >Contact</div>
+                    <div style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;">
+                    <div class="content">Connect through following links:</div><br>
+                    <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                        
+                        <div class = "imgball2" style="background-image: url('./github.png');background-size: cover;width: 100px ;height: 100px;"></div>
     
-    <div class="middle">
-            <div class="hs">About</div>
-            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel provident delectus sint ex ab eos nulla, aperiam deleniti, cumque quam eius obcaecati repellendus, repudiandae mollitia recusandae enim necessitatibus omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores consectetur eaque asperiores quasi repellat voluptatem, laudantium doloremque est, omnis sint labore repudiandae recusandae nemo expedita. Iure, aliquam. Non, consectetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur. Repellat eveniet itaque laborum error esse nesciunt sed, aut corrupti, fugiat facilis hic ratione quasi necessitatibus dolor voluptatem. Nihil, laborum.<eaque class="lore"></eaque></div>
-        <div class="ls" style="background-image:url('./IITBG.png');background-attachment: fixed;background-size: 100vw 100vh;height: 400px;width: 100%;border-bottom-left-radius: 40%;">
-             </div>
-            <div></div>
-            <div class="hs">Hobbies</div>
-            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel provident delectus sint ex ab eos nulla, aperiam deleniti, cumque quam eius obcaecati repellendus, repudiandae mollitia recusandae enim necessitatibus omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores consectetur eaque asperiores quasi repellat voluptatem, laudantium doloremque est, omnis sint labore repudiandae recusandae nemo expedita. Iure, aliquam. Non, consectetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur. Repellat eveniet itaque laborum error esse nesciunt sed, aut corrupti, fugiat facilis hic ratione quasi necessitatibus dolor voluptatem. Nihil, laborum.<eaque class="lore"></eaque></div>
-        <div></div>
-            <div class="hs">Random</div>
-            <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel provident delectus sint ex ab eos nulla, aperiam deleniti, cumque quam eius obcaecati repellendus, repudiandae mollitia recusandae enim necessitatibus omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores consectetur eaque asperiores quasi repellat voluptatem, laudantium doloremque est, omnis sint labore repudiandae recusandae nemo expedita. Iure, aliquam. Non, consectetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, consectetur. Repellat eveniet itaque laborum error esse nesciunt sed, aut corrupti, fugiat facilis hic ratione quasi necessitatibus dolor voluptatem. Nihil, laborum.<eaque class="lore"></eaque></div>
-            <br>
+                        <div class = "imgball2" style="background-image: url('./linkedin.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                        
+                        <div class = "imgball2" style="background-image: url('./insta.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                        
+                        <div class = "imgball2" style="background-image: url('./gmail.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                    </div>
+                    </div>
             
-        </div>
-    <img src="./m.png" width="200*1.7" height="200" style="position:fixed;top:70%;left:75%">
-    <div class="bottom"> Copyright Author: Harshit Kandpal</div>
+    </div>
+    </div>
+    <div class="HOME">
+                <div class="middle">
+                        <div class = "bx" style="background-color: black;">
+                                <div class="hs" >About</div>
+                                <div style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;">
+                                <div class="content" style="width: 70%;">Hey There visitor! I am Harshit Kandpal. I am persuing Electrical Engineering in IIT Bhilai. My college JOURNEY has just begun, and I have a long way to go. I am eager to make new connections and expand my network. Currently I am exploring various domains related to Technology and participating in Tecnho Events. <eaque class="lore"></eaque></div>
+                                <div class="imgball"></div>
+                                </div>
+                        </div>
+                        <div class = "bx">
+                                <div class="ls" style="background-image:url('./IITBG.png');background-attachment: fixed;background-size: 100vw 100vh;height: 400px;width: 100%;">
+                                    <div class="hs">COLLEGE</div>
+                                    </div>
+                                    <div></div>
+                                    <div style="background-image: url('./guit.jpg');background-attachment: fixed;background-repeat: no-repeat;background-size: 100vw 100vh;">
+                                    <div class="hs">Hobbies</div>
+                                    <div class="content" style="width:20%;"">I like to play Guitar very much. I generally play cover songs of movies. I enjoy table tennis and can play it very well. I also like listening to music. You can check out my playlists which I listen to oftenly.<eaque class="lore"></eaque></div>
+                                    </div>   
+                        </div>
+                        <div class="bx">            
+                        <div class="hs">Resume</div>
+                        <div class="content">You can find my resume in the following link .<eaque class="lore"></eaque></div>
+                        <br>
+                        </div>
+
+                    </div>
+               
+   </div>
+    <div class="JOURNEY" style="display:none"> <div class="content">STAY TUNED FOR MORE UPDATES </div><img src="./m.png" width="200*1.7" height="200" style="position:fixed;top:70%;left:75%"></div></div>
+    <div class="bottom"  > <div>Copyright Website Designed and Implemented By: Harshit Kandpal</div></div>
+    
     <!-- <script>bod = document.querySelector(".middle");
 
         function createparticles(){
@@ -206,20 +324,7 @@
         }
         createparticles();
         animate()</script> -->
-        <script>
-        const fic = false;
-        const barTop = document.querySelector('#bar_op');
-
-        const topOffset = barTop.offsetTop; // Get the initial offset position of the .bar_top
-
-        window.addEventListener('scroll', function() {
-        if (window.scrollY > topOffset) {
-            barTop.classList.add('fixed'); // Add the fixed class when scrolled past the topOffset
-        } else {
-            
-            barTop.classList.remove('fixed'); // Remove the fixed class when above topOffset
-        }
-    });
+        <script src="./backend.js" defer>
         </script>
 </body>
 </html>

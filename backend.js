@@ -1,13 +1,34 @@
+const fic = false;
+const barTop = document.querySelector('#bar_op');
+
+const topOffset = barTop.offsetTop; // Get the initial offset position of the .bar_top
+
 window.addEventListener('scroll', function() {
-    const barTop = document.querySelector('.bar_op');
-    const topOffset = barTop.offsetTop; // Get the initial offset position of the .bar_top
-    if (window.scrollY > topOffset) {
-        $(".bar_op").animate({position: 'fixed', /* Keeps the bar fixed at the top * //
-    bottom: 0, /* Sticks to the top of the viewport */
-    borderRadius: '10px',
-    fontSize: '20px',
-    backgroundColor: 'rgba(36,36,36)'})
-    
-    }
+        if (window.scrollY > topOffset) {
+            barTop.classList.add('fixed'); // Add the fixed class when scrolled past the topOffset
+        } else {
+            
+            barTop.classList.remove('fixed'); // Remove the fixed class when above topOffset
+        }
+});
+
+const a = document.querySelectorAll("a");
+let lena= a.length;
+for(let i=1;i<=lena;i++){
+       a[i-1].addEventListener("click",function(){    
+            const cont=["HOME","CONTACT","JOURNEY"];
+            console.log(`.${cont[i-1]}`);
+            for(let m=1;m<=lena;m++){
+            if(m==i){
+                document.querySelector(`.${cont[m-1]}`).style.display = "block";
+                document.querySelector(`.${cont[m-1]}b`).style.border="solid white";
+                
+               }else{   
+                document.querySelector(`.${cont[m-1]}`).style.display = "none";
+                
+                document.querySelector(`.${cont[m-1]}b`).style.border="";
+               }
+            }
+        })
+     
 }
-);
