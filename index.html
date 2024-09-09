@@ -65,9 +65,8 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            background-image: url("./topbg2.jpg");
-            background-size: 50vw 50vh;
-            background-position: center;
+            background-image: url("./pexels-pixabay-47367.jpg");
+            background-size: 50vw 100vh;
             background-attachment: fixed;
             background-repeat: no-repeat;
             border-bottom: solid white;
@@ -124,7 +123,7 @@
             background-image: url("./bg.jpg");
         }
         .content{
-            font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             color:white;
             padding: 30px 0px 10px 100px;
             font-size: large;
@@ -134,13 +133,16 @@
         .bottom{
             padding: 20px;
             width: 100%;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 200px;
-            background-image: url('./botbg.jpg');
-            background-size: 50vw 50vh;
-
+            background-image: url("./pexels-pixabay-47367.jpg");
+            background-size: 50vw 100vh;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            border-bottom: solid white;
             color:rgb(194, 184, 166);
         }
         div[id^="g"]{
@@ -213,7 +215,6 @@
                 background-position: 300% 600%;
             }
             100%{
-                
                 background-position: 600% 1000%;
             }
         }
@@ -221,7 +222,11 @@
             margin: 30px;
         }
         .bx{
-            margin:10px 0px 10px 0px ;
+            background-color: rgb(0, 11, 8);
+            border: #0087ca solid ;
+            border-radius:20px;
+        
+            margin:10px 10px 10px 10px ;
         }
         @keyframes slid {
         0% {
@@ -256,19 +261,19 @@
     </div>
     <div class="CONTACT" style="display:none">
         <div class="middle"></div>
-            <div class = "bx" style="background-color: black;">
+            <div class = "bx" >
                     <div class="hs" >Contact</div>
                     <div style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;">
                     <div class="content">Connect through following links:</div><br>
                     <div style="display: flex;flex-direction: row;justify-content: space-between;">
                         
-                        <div class = "imgball2" style="background-image: url('./github.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                        <a class = "imgball2" href="https://github.com/HarK-github" style="background-image: url('./github.png');background-size: cover;width: 100px ;height: 100px;"></a>
     
-                        <div class = "imgball2" style="background-image: url('./linkedin.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                        <a class = "imgball2" href="https://www.linkedin.com/in/harshit-k-a746a1310/" style="background-image: url('./linkedin.png');background-size: cover;width: 100px ;height: 100px;"></a>
                         
-                        <div class = "imgball2" style="background-image: url('./insta.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                        <a class = "imgball2" style="background-image: url('./insta.png');background-size: cover;width: 100px ;height: 100px;"></a>
                         
-                        <div class = "imgball2" style="background-image: url('./gmail.png');background-size: cover;width: 100px ;height: 100px;"></div>
+                        <a class = "imgball2" onclick="()=>{alert('kandpalhar@gmail.com')}" style="background-image: url('./gmail.png');background-size: cover;width: 100px ;height: 100px;"></a>
                     </div>
                     </div>
             
@@ -276,22 +281,38 @@
     </div>
     <div class="HOME">
                 <div class="middle">
-                        <div class = "bx" style="background-color: black;">
+                        <div class = "bx"  >
                                 <div class="hs" >About</div>
                                 <div style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;">
-                                <div class="content" style="width: 70%;">Hey There visitor! I am Harshit Kandpal. I am persuing Electrical Engineering in IIT Bhilai. My college JOURNEY has just begun, and I have a long way to go. I am eager to make new connections and expand my network. Currently I am exploring various domains related to Technology and participating in Tecnho Events. <eaque class="lore"></eaque></div>
+                                <div class="content" style="width: 70%;">Welcome to my profile. I'm Harshit Kandpal, an aspiring Electrical Engineer currently pursuing my studies at IIT Bhilai. As a student in the early stages of my academic journey, I am excited to be part of an institution that fosters innovation, creativity, and technical expertise. Although my college journey has just begun, I am determined to make the most of this opportunity and carve a path toward success in the field of Electrical Engineering.
+
+                                    I am passionate about exploring a wide range of topics within technology, and I am always eager to learn and grow. From delving into the intricacies of circuit design and power systems to understanding the cutting-edge developments in electronics and automation, I am on a quest to gain a holistic understanding of the technological landscape.
+                                    
+                                    In addition to my coursework, I actively participate in various techno-events, hackathons, and workshops that allow me to apply my knowledge and skills in practical scenarios. These experiences not only enhance my technical abilities but also help me develop problem-solving skills, teamwork, and leadership qualities.
+                                </div>
                                 <div class="imgball"></div>
+                                <div class="content" style="align-self: flex-end;">
+                                    One of my primary goals during my time at IIT Bhilai is to build meaningful connections with like-minded individuals, mentors, and industry professionals. I believe that networking and collaboration are key to personal and professional growth. By engaging with peers and experts from diverse fields, I hope to broaden my horizons and gain new perspectives that will shape my career.
+                                    
+                                    I am always open to making new connections, exchanging ideas, and collaborating on projects. Whether you are a fellow student, a professional, or just someone with a shared interest in technology, I would love to connect with you. Let’s explore opportunities to learn, grow, and innovate together!
+                                    
+                                    Feel free to reach out, and let's embark on this exciting journey of exploration and discovery.
+                                    
+                                    <eaque class="lore"></eaque></div>
+                                
                                 </div>
                         </div>
                         <div class = "bx">
-                                <div class="ls" style="background-image:url('./IITBG.png');background-attachment: fixed;background-size: 100vw 100vh;height: 400px;width: 100%;">
+                                <div class="ls" style="width:50%0;height:50%;background-image:url('./IITBG.png');background-attachment: fixed;background-size: 100vw 100vh;height: 400px;width: 100%;">
                                     <div class="hs">COLLEGE</div>
                                     </div>
                                     <div></div>
                                     <div style="background-image: url('./guit.jpg');background-attachment: fixed;background-repeat: no-repeat;background-size: 100vw 100vh;">
-                                    <div class="hs">Hobbies</div>
-                                    <div class="content" style="width:20%;"">I like to play Guitar very much. I generally play cover songs of movies. I enjoy table tennis and can play it very well. I also like listening to music. You can check out my playlists which I listen to oftenly.<eaque class="lore"></eaque></div>
-                                    </div>   
+                                    <div>
+                                        <div class="hs">Hobbies</div>
+                                    <div class="content" style="width:20%;">I like to play Guitar very much. I generally play cover songs of movies. I enjoy table tennis and can play it very well. I also like listening to music. You can check out my playlists which I listen to oftenly.<eaque class="lore"></eaque></div>
+                                </div>
+                                </div>   
                         </div>
                         <div class="bx">            
                         <div class="hs">Resume</div>

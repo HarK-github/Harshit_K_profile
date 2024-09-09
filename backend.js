@@ -24,11 +24,17 @@ for(let i=1;i<=lena;i++){
                 document.querySelector(`.${cont[m-1]}b`).style.border="solid white";
                 
                }else{   
-                document.querySelector(`.${cont[m-1]}`).style.display = "none";
-                
+                document.querySelector(`.${cont[m-1]}`).style.display = "none"
                 document.querySelector(`.${cont[m-1]}b`).style.border="";
                }
             }
         })
      
+}
+
+onmousemove=function(e){
+    const ms = document.querySelector(".top");    
+    const ms2 = document.querySelector(".bottom");    
+    ms.style.backgroundPosition =`${e.clientX/1000}% ${e.clientY/10}%`;
+    ms2.style.backgroundPosition =`${e.clientX/1000}% ${e.clientY/10}%`;
 }
