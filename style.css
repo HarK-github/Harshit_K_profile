@@ -1,0 +1,246 @@
+body{
+    animation: strt;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation: ease;
+    background-color: black;
+}
+@keyframes strt {
+    from{
+        display: none;
+    }to{
+        display: contents;
+    }
+}       
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    margin:0px;
+}
+    
+.hs{
+    font-family:  "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    padding: 30px;
+    text-decoration:underline green;
+    animation: slid 1.5s;
+}
+
+.h{
+    font-family:  "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:100px;
+    font-weight: 600;
+    margin: 20px;
+    animation-name:disco;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color:rgb(245, 245, 247);
+}
+
+@keyframes disco{
+    from{
+        color:rgb(168, 160, 160);
+    }
+    to{
+        
+        color:rgb(235, 235, 235);
+    }
+
+}
+.top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url("./pexels-pixabay-47367.jpg");
+    background-size: 50vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-bottom: solid white;
+    height: 50%;
+}
+.bar_top{
+    width: 50%;
+    padding:10px;
+    margin:0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+a{ 
+    text-decoration: none;
+    padding: 20px;
+    
+    height: 10%;
+    font-size: 20px;
+    color:white;
+}
+a:hover{
+    text-decoration: underline blue;
+    color:gray;
+    padding:10px;
+    font-size: 30px;
+    height: 10%;
+    transition: color 0.25s, font-size 0.25s,padding 0.115s;
+}
+#bar_op:not(.fixed){
+    /*position:fixed;
+    top:28%;*/
+    display: flex;
+    justify-content:space-around;
+    width:40%;
+    padding:20px;
+    margin:10px;
+    color:rgb(190, 176, 176);   
+}
+
+
+.fixed {
+        position: fixed; /* Keeps the bar fixed at the top */
+        top:0px;
+        right:0%;
+        font-size: 20px;
+        background-color: black;
+        padding:20px;
+        margin:10px;
+    }
+.middle{
+    background-image: url("./bg.jpg");
+}
+.content{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color:white;
+    padding: 30px 0px 100px 100px;
+    font-size: large;
+    animation: slid 1s;
+    
+    
+}
+.bottom{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-image: url("./pexels-pixabay-47367.jpg");
+    background-size: 50vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-bottom: solid white;
+    color:rgb(194, 184, 166);
+}
+div[id^="g"]{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(61, 49, 49);
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+    animation-name: down;
+    animation-duration: 2s; /* Set the duration */
+    animation-timing-function: linear; /* Ensure smooth movement */
+    animation-iteration-count: infinite; /* Repeat the animation infinitely */
+}
+@keyframes down {
+    from{
+        top:-20px;
+    }to{
+        top: 100vh;
+    }
+}
+.underline{
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+.imgball{
+    margin:0px 40px 50px 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("./self(2).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: 100vw 100vh;
+    
+    animation: slid 2s;
+}
+.imgball:hover{
+    margin:0px 40px 50px 0px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url("./self(2).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: 100vw 100vh;
+}
+.multicolor-text {
+    font-weight: 900;
+    font-size: 50px;
+    background: linear-gradient(to left,
+            violet,
+            rgb(102, 149, 248),
+            rgb(5, 109, 45),
+            rgb(38, 233, 38),
+            rgb(66, 25, 250),
+            violet
+            );
+            background-size: 900%;
+    background-clip: text;
+    color: transparent;
+    animation:colors 33s linear infinite;
+}
+@keyframes colors {
+    0%{
+        background-position: 0% 300%;              
+    }
+    50%{
+        background-position: 300% 600%;
+    }
+    100%{
+        background-position: 600% 1000%;
+    }
+}
+.imgball2{
+    margin: 30px;
+}
+.bx{
+    background-color: rgb(0, 11, 8);
+    border: #0087ca solid ;
+    border-radius:20px;
+    width: 100%;
+    margin:10px 10px 10px 10px ;
+}
+@keyframes slid {
+0% {
+    transform: translateX(-100%);
+}
+100% {
+    transform: translateX(0%);
+}
+}@keyframes backslid {
+0% {
+    transform: translateX(0%);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+@keyframes bounce {
+    0% {
+    transform: translateY(10%);
+}
+100% {
+    transform: translateY(+30%);
+}
+}
