@@ -1,3 +1,31 @@
+
+
+const loc= document.querySelector(".loc");
+
+const wet=document.querySelector(".wet");
+const spd= document.querySelector(".spd");
+
+async function weather(){
+    try{
+    let resolve = await fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Bhilai?key=2PHVH3TVPZLUDSPN9BHVGNKVC");
+    let json =await resolve.json();
+    console.log(json);
+    loc.textContent +=json.address;
+    wet.textContent +=json.currentConditions.conditions;
+    spd.textContent +=json.address;
+}catch(err){
+    console.log("Error fetching y");
+}
+}
+weather()
+
+
+
+
+
+
+
+
 const fic = false;
 const barTop = document.querySelector('#bar_op');
 

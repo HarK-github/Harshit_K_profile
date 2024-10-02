@@ -1,5 +1,3 @@
 # **My Personal Website**
 
-This is the repo of my personal website.
-
-https://hark-github.github.io/Harshit_K_profile/
+This is the repo of the website containing all the information about myself and my projects. Will be updated timely.
